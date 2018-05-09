@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="employee.js"></script>
+<meta charset="utf-8">
+<title>Overriding</title>
+</head>
+<body>
+<script>
+
+	function getEmployeeDetails(){
+		Employee.prototype.getName = function () {
+			return this.name.toUpperCase();
+		}
+	
+		var emp1 = new Employee("Mark");
+		var emp2 = new Employee("Sara");
+
+		document.write("Emp 1 = " + emp1.getName() + "<br />");
+		document.write("Emp 2 = " + emp2.getName() + "<br />");
+
+	}
+	getEmployeeDetails();
+		
+	
+</script>
+</body>
+</html>

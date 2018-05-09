@@ -1,0 +1,32 @@
+<!DOCTYPEhtml>
+<html>
+<head>
+	<title>Variable and Scopes</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+	//"use strict"
+
+	var x = 10; 		// global
+	alert("x="+x);
+
+	function f1(){
+		var y = 5; 	  // local/private 
+		alert("y="+y);
+
+		z = 12;    // auto global variable        
+		alert("x="+x);
+		let t = 14;
+		alert("t="+t);
+	}
+
+	f1();
+	//alert("y="+y);
+
+	alert("z="+z);		// auto global variable
+	
+
+	</script>
+</body>
+</html>

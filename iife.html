@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Immediately Invoked Function Expresions</title>
+</head>
+<body>
+<script>
+
+	(function (){	// anonymous function
+		var x = 10;	//var x does not get spilled over the global var
+		alert(x); 	//private
+	})();
+	alert(x);
+
+
+	/*var x = 10;	//this var is attached to the window object
+	alert(window.x);
+	alert(this.x);	//top window object of DOM, not current instance */
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+

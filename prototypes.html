@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Prototypes</title>
+</head>
+<body>
+<script>
+	
+	function Employee(name){
+		this.name = name;
+
+		/*this.getName = function (){		//2 copies of this function will be created since we have 2 employee object
+			return this.name;
+		}*/
+	}
+	Employee.prototype.getName = function(){	//associating getName() with the Employee object using the prototype property
+		return this.name;
+	}
+
+	var emp1 = new Employee("Mark");
+	/*emp1.getName = function(){
+		return this.name;
+	}*/
+	var emp2 = new Employee("Sara");
+	/*emp2.getName = function(){
+		return this.name;
+	}*/
+
+	document.write("Emp 1 = " + emp1.getName() + "<br />");
+	document.write("Emp 2 = " + emp2.getName() + "<br />");
+
+</script>
+</body>
+</html>
+
+
+
+
+
+

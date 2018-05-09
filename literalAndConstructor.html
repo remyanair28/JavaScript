@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Literal and Constructor</title>
+</head>
+<body>
+<script>
+	
+	document.write("Literal<br/><br/>");
+	
+	var employee = {
+		name: "John"
+	}
+
+	var newEmployee = employee;
+
+	document.write("Before Changes<br/>");
+	document.write("employee.name =" + employee.name + "<br/>");
+	document.write("newEmployee.name =" + newEmployee.name + "<br/><br/>");
+
+	newEmployee.name = "Mary";
+
+	document.write("After Changes<br/>");
+	document.write("employee.name =" + employee.name + "<br/>");
+	document.write("newEmployee.name =" + newEmployee.name + "<br/><br/>");
+
+	document.write("Construction function<br/><br/>");
+	var emp = function(){
+		this.name = "John"
+	}
+
+	var employee = new emp();
+	var newEmployee = new emp();
+
+	document.write("Before Changes<br/>");
+	document.write("employee.name =" + employee.name + "<br/>");
+	document.write("newEmployee.name =" + newEmployee.name + "<br/><br/>");
+
+	newEmployee.name = "Mary";
+
+	document.write("After Changes<br/>");
+	document.write("employee.name =" + employee.name + "<br/>");
+	document.write("newEmployee.name =" + newEmployee.name + "<br/><br/>");
+
+</script>
+</body>
+</html>

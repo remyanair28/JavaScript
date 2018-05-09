@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Inheritance</title>
+</head>
+<body>
+<script>
+	//Constructor function which create Employee object
+	//Employee will be the base object (similar to base class in java)
+	var Employee = function(name){
+		this.name = name;
+	}
+
+	//getName() is added to the base object (Employee)
+	Employee.prototype.getName = function(){
+		return this.name;
+	}
+
+	//Constructor function which create PermanentEmployee object
+	//PermanentEmployee will be the derived object
+	var PermanentEmployee = function(annualSalary){
+		this.annualSalary = annualSalary;
+	}
+	
+	//To associate Employee object as parent of PermanentEmployee make use of prototype 
+
+	var employee = new Employee("Mark");
+
+	PermanentEmployee.prototype = employee;
+
+	var perEmp = new PermanentEmployee(80000);
+	//Derived object (PermanentEmployee) gets the base object (Employee) getName() method
+	document.write(perEmp.getName());
+
+</script>
+</body>
+</html>
